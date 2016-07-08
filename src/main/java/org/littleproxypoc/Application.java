@@ -35,9 +35,9 @@ public class Application {
                             // todo how do I forward requests to localhost:18080 ???
 
                             HttpRequest httpRequest = (HttpRequest) httpObject;
-                            httpRequest.setMethod(HttpMethod.CONNECT);
-//                            httpRequest.headers().remove("Host");
-//                            httpRequest.headers().add("Host", "localhost:18080");
+//                            httpRequest.setMethod(HttpMethod.CONNECT);
+                            httpRequest.headers().remove("Host");
+                            httpRequest.headers().add("Host", "localhost:18080");
                         }
                         return null;
                     }
